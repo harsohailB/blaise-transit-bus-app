@@ -1,4 +1,4 @@
-import { findNearest, getDistance } from "geolib";
+import { findNearest } from "geolib";
 
 export const getNearestBusStop = (passengerLocation, busStopLocations) => {
   passengerLocation = {

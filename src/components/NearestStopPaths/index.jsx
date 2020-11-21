@@ -45,6 +45,8 @@ const NearestStopPaths = ({ viewport, mapStyles }) => {
       incrementBusStopPassengerCount(nearestBusStopLocation);
     });
 
+    console.log(busStopData);
+
     setLayers(tempPathLayers);
   }, [passengerData, busStopData]);
 

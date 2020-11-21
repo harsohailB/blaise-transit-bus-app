@@ -66,15 +66,27 @@ const CityBrowser = () => {
     if (selectedCity === "Montréal") {
       console.log("mont");
       setPassengerData(montrealPassengersData);
-      setBusStopData(montrealStopsData);
+      setBusStopData(
+        montrealStopsData.map((stopData) => {
+          return { ...stopData, count: 0 };
+        })
+      );
     } else if (selectedCity === "Calgary") {
       console.log("cal");
       setPassengerData(calgaryPassengersData);
-      setBusStopData(calgaryStopsData);
+      setBusStopData(
+        calgaryStopsData.map((stopData) => {
+          return { ...stopData, count: 0 };
+        })
+      );
     } else if (selectedCity === "Edmonton") {
       console.log("ed");
       setPassengerData(edmontonPassengersData);
-      setBusStopData(edmontonStopsData);
+      setBusStopData(
+        edmontonStopsData.map((stopData) => {
+          return { ...stopData, count: 0 };
+        })
+      );
     }
   }, [selectedCity]);
 
