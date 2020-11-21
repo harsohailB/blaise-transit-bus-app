@@ -19,8 +19,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin-top: 5vw;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (max-width: 968px) {
     width: 90vw;
   }
 `;
@@ -50,10 +49,10 @@ const Button = styled.div`
     transform: translate(-5px, -5px);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     width: 20vw;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 10px;
+    margin-top: 15px;
   }
 `;
 

@@ -27,7 +27,7 @@ const BusMap = () => {
 
   const mapStyles = {
     width: "90vw",
-    height: "50vh",
+    height: "60vh",
   };
 
   const parseToGeoLib = (cords) => {
