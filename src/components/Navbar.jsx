@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   padding-bottom: 10px;
 
   @media (max-width: 768px) {
+    height: 8vh;
     flex-direction: column;
   }
 `;
@@ -36,8 +37,9 @@ const Text = styled.div`
   margin-right: 49.5px;
 
   @media (max-width: 768px) {
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 `;
 

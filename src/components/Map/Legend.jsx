@@ -4,6 +4,8 @@ import styled from "styled-components";
 const LegendEntry = styled.div`
   margin: 10px;
   color: #f7f7f7;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 
   &::before {
     color: ${(props) => props.color};

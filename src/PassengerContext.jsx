@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import passengersData from "./assets/passengers.json";
+import passengersData from "./assets/testData/montreal/passengers.json";
 
 export const PassengerContext = createContext();
 

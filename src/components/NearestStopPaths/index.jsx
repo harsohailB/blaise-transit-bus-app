@@ -2,21 +2,21 @@ import React, { useState, useEffect, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import DeckGL, { PathLayer } from "deck.gl";
 
-import passengersData from "../../assets/passengers.json";
-import stopsData from "../../assets/stops.json";
 import { getNearestBusStop } from "./nearestBugStopCalculator";
 import { BusStopContext } from "../../BusStopContext";
+import { PassengerContext } from "../../PassengerContext";
 
 const NearestStopPaths = ({ viewport, mapStyles }) => {
   const [layers, setLayers] = useState([]);
+  const [passengerData, setPassengerData] = useContext(PassengerContext);
   const [busStopData, setBusStopData] = useContext(BusStopContext);
 
   useEffect(() => {
     let tempPathLayers = [];
-    passengersData.forEach((passengerLocation) => {
+    passengerData.forEach((passengerLocation) => {
       const nearestBusStopLocation = getNearestBusStop(
         passengerLocation,
-        stopsData
+        busStopData
       );
 
       let data = [
@@ -46,7 +46,7 @@ const NearestStopPaths = ({ viewport, mapStyles }) => {
     });
 
     setLayers(tempPathLayers);
-  }, []);
+  }, [passengerData, busStopData]);
 
   const incrementBusStopPassengerCount = (nearestStopLocation) => {
     let nearestStopIndex = busStopData.findIndex(
