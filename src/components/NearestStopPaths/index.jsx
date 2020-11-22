@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import DeckGL, { PathLayer } from "deck.gl";
 
-import { getNearestBusStop } from "./nearestBugStopCalculator";
+import { getNearestBusStop } from "./nearestBusStopCalculator";
 import { BusStopContext } from "../../BusStopContext";
 import { PassengerContext } from "../../PassengerContext";
 
