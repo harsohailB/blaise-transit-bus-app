@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,13 +10,14 @@ const Wrapper = styled.div`
   z-index: 9999999;
 
   @media (max-width: 1100px) {
+    width: 90vw;
     margin-left: 10px;
   }
 `;
 
 const LegendWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #343433;
   border-radius: 15px;
@@ -44,7 +45,7 @@ const LegendEntry = styled.div`
 
   @media (max-width: 1100px) {
     margin: 5px;
-    font-size: 8px;
+    font-size: 10px;
   }
 `;
 
@@ -59,8 +60,7 @@ const Text = styled.div`
   font-size: 14px;
 
   @media (max-width: 1100px) {
-    margin: 5px;
-    font-size: 8px;
+    display: none;
   }
 `;
 

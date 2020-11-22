@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   padding-bottom: 10px;
 
   @media (max-width: 768px) {
-    height: 12vh;
+    height: 10vh;
     flex-direction: column;
   }
 `;
@@ -27,6 +27,8 @@ const Image = styled.img`
 
   @media (max-width: 768px) {
     margin-left: 10px;
+    height: 5vh;
+    width: auto;
   }
 `;
 
@@ -37,9 +39,9 @@ const Text = styled.div`
   margin-right: 49.5px;
 
   @media (max-width: 768px) {
+    font-size: 12px;
     margin-right: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
   }
 `;
 
