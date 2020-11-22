@@ -1,4 +1,4 @@
-# Blaise Transit Buss App
+# Blaise Transit Bus App
 
 ## Coding Challenge Winter 2021
 
