@@ -5,6 +5,7 @@ import { BusStopProvider } from "./BusStopContext";
 import { PassengerProvider } from "./PassengerContext";
 import Navbar from "./components/Navbar";
 import CityBrowser from "./components/CityBrowser";
+import Legend from "./components/Map/Legend";
 
 const BodyWrapper = styled.div`
   width: 100%;
@@ -12,7 +13,7 @@ const BodyWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5vw;
+  margin-top: 2vw;
 `;
 
 const MapWrapper = styled.div`
@@ -29,6 +30,7 @@ function App() {
         <Navbar />
 
         <BodyWrapper>
+          <Legend />
           <MapWrapper>
             <BusMap />
           </MapWrapper>

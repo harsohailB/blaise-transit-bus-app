@@ -75,7 +75,6 @@ const BusMap = () => {
       <NearestStopPaths viewport={viewport} mapStyles={mapStyles} />
       <PassengerMarkers />
       <BusStopMarkers />
-      <Legend />
     </ReactMapGL>
   ) : (
     <div></div>
