@@ -10,6 +10,8 @@ import { PassengerContext } from "../../PassengerContext";
 import { BusStopContext } from "../../BusStopContext";
 
 const BusMap = () => {
+  // Ideally, this would be stored in a .env file and called using process.env.MAPBOX_TOKEN,
+  // however, it is placed here for easier installation and testing of the app by the recruiter
   const MAPBOX_TOKEN =
     "pk.eyJ1IjoiaGFyc29oYWlsYnJhciIsImEiOiJja2hydzB2cTYwNXdzMnRwZ3E2cXo5aDRlIn0.bIydJEY6Hu3nE5zof0JwaQ";
 
@@ -30,6 +32,7 @@ const BusMap = () => {
     height: "60vh",
   };
 
+  // Changes attributes of coords to be geo lib compatible
   const parseToGeoLib = (cords) => {
     return {
       latitude: cords.lat,
@@ -37,8 +40,8 @@ const BusMap = () => {
     };
   };
 
+  // Finds center of all points (passenger + bus stop) and centers viewport accordingly
   useEffect(() => {
-    console.log(dataReady);
     if (dataReady) {
       const passengerDataPoints = passengerData.map((passengerLocation) =>
         parseToGeoLib(passengerLocation)

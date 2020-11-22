@@ -64,7 +64,6 @@ const CityBrowser = () => {
 
   useEffect(() => {
     if (selectedCity === "Montréal") {
-      console.log("mont");
       setPassengerData(montrealPassengersData);
       setBusStopData(
         montrealStopsData.map((stopData) => {
@@ -72,7 +71,6 @@ const CityBrowser = () => {
         })
       );
     } else if (selectedCity === "Calgary") {
-      console.log("cal");
       setPassengerData(calgaryPassengersData);
       setBusStopData(
         calgaryStopsData.map((stopData) => {
@@ -80,7 +78,6 @@ const CityBrowser = () => {
         })
       );
     } else if (selectedCity === "Edmonton") {
-      console.log("ed");
       setPassengerData(edmontonPassengersData);
       setBusStopData(
         edmontonStopsData.map((stopData) => {
