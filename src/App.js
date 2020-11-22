@@ -25,20 +25,22 @@ const MapWrapper = styled.div`
 
 function App() {
   return (
-    <BusStopProvider>
-      <PassengerProvider>
-        <Navbar />
+    <div>
+      <Navbar />
 
-        <BodyWrapper>
-          <Legend />
-          <MapWrapper>
-            <BusMap />
-          </MapWrapper>
+      <BodyWrapper>
+        <Legend />
 
-          <CityBrowser />
-        </BodyWrapper>
-      </PassengerProvider>
-    </BusStopProvider>
+        <BusStopProvider>
+          <PassengerProvider>
+            <MapWrapper>
+              <BusMap />
+            </MapWrapper>
+            <CityBrowser />
+          </PassengerProvider>
+        </BusStopProvider>
+      </BodyWrapper>
+    </div>
   );
 }
 
