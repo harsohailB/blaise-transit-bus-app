@@ -42,14 +42,14 @@ const NearestStopPaths = ({ viewport, mapStyles }) => {
         })
       );
 
+      // When new path is created to bus stop, increments count of that bus stop
       incrementBusStopPassengerCount(nearestBusStopLocation);
     });
-
-    console.log(busStopData);
 
     setLayers(tempPathLayers);
   }, [passengerData, busStopData]);
 
+  // Increments passenger count of incoming passengers
   const incrementBusStopPassengerCount = (nearestStopLocation) => {
     let nearestStopIndex = busStopData.findIndex(
       (stop) =>
