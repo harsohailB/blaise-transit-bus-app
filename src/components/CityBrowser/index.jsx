@@ -53,6 +53,7 @@ const Button = styled.div`
     width: 20vw;
     padding: 10px;
     margin-top: 15px;
+    font-size: 14px;
   }
 `;
 
